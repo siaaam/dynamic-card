@@ -1,5 +1,6 @@
 import Card from './components/Card';
 function App() {
+  // dynamic card
   const cards = [
     {
       id: 1,
@@ -21,7 +22,12 @@ function App() {
   return (
     <div className="App">
       {cards.map((card) => (
-        <Card id={card.id} heading={card.heading} text={card.text} />
+        <Card
+          key={card.id}
+          id={card.id}
+          heading={card.heading}
+          text={card.text}
+        />
       ))}
     </div>
   );
